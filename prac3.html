@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<button id="btn1">double its width</button>
+<button id="btn2">triple its height</button>
+<button id="btn3">change its color</button>
+<div id="div1" style="width:30px;height:30px;background-color:#ffc">
+    
+</div>
+<script>
+    
+    
+    
+      var oBtn1=document.getElementById("btn1");
+      var oBtn2=document.getElementById("btn2");
+      var oBtn3=document.getElementById("btn3");
+      var oDiv=document.getElementById("div1");
+    
+      var setStyle=function(obj,styleName,styleValue){
+          obj['style'][styleName]=styleValue;
+           console.log('222222'); 
+      };
+    
+     //console.log(oDiv.style.width);// 30px is a Sting.
+     //note:do not forget "oBtn.onclick =" should be a function(){}.
+      // otherwise, the setStyle funcion will be automatically executed after page rendered .
+       oBtn1.onclick=function(){setStyle(oDiv,"width",2*parseInt(oDiv.style.width)+'px');};
+       oBtn2.onclick=function(){setStyle(oDiv,"height",3*parseInt(oDiv.style.height)+'px');};
+       oBtn3.onclick=function(){setStyle(oDiv,"background",getRandomColor());};
+    
+    
+    
+      function getRandomColor() {
+          console.log('111111');
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+</script>
+    
+</body>
+
+</html>

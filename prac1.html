@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<input id="input1" type="checkbox"/>
+<div id="div1" style="width:200px;height:100px;background-color:#FFC;display:none"></div>
+<script>
+      var oInput = document.getElementById("input1");
+      var oDiv = document.getElementById('div1');
+    
+      oInput.onmouseover = function(){
+        oDiv.style.display="block";
+        oDiv.innerHTML = "Please check the box if you want automatically log in.";
+      };
+    
+      oInput.onmouseout = function(){
+        oDiv.style.display="none";
+      };
+</script>
+</body>
+</html>
