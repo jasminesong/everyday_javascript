@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+</head>
+<body style="background:url(pageBG.png);">
+<div id="div1">
+    
+</div>
+<script>
+    
+    var oDiv = document.getElementById('div1');
+    //var aImg = document.getElementsByTagName("img");
+    
+    var addZero = function(num){
+        if(num>=10){
+            return num+" ";
+        }else{
+            return "0"+num;
+        }
+    };
+        
+    
+    var getCurrentTimeString = function(){
+        
+        console.log("1111");
+        var oDate = new Date();
+          var seconds = addZero(oDate.getSeconds());
+          var minutes = addZero(oDate.getMinutes());
+          var hours = addZero(oDate.getHours());
+        
+        
+        //oDiv.innerHTML="<img src='"+seconds.charAt(0)+".png' />"+"<img              src='"+seconds.charAt(1)+".png' />"
+        oDiv.innerHTML="<img src='"+hours.charAt(0)+".png' />"+"<img              src='"+hours.charAt(1)+".png' />"+"   :   "+"<img src='"+minutes.charAt(0)+".png' />"+"<img              src='"+minutes.charAt(1)+".png' />"+"   :   "+"<img src='"+seconds.charAt(0)+".png' />"+"<img              src='"+seconds.charAt(1)+".png' />"
+
+    
+    }; 
+    
+        setInterval(getCurrentTimeString,1000);
+    
+        getCurrentTimeString();//for all the pics show in  0s start.
+    
+
+    
+    
+</script>
+</body>
+
+</html>
