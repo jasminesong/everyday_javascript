@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+    <input type="button" value="introduction"/>
+    <input type="button" value="discription"/>
+    <input type="button" value="reviews"/>
+
+<div style="display:block;width:250px;border:solid">
+BECOMING NICOLE
+The Transformation of an American Family
+By Amy Ellis Nutt
+Illustrated. 279 pp. Random House. $27.
+    
+</div>
+<div style="display:none;width:250px;border:solid">
+    “Becoming Nicole: The Transformation of an American Family,” by Amy Ellis Nutt, generously traces the parameters of parental love. It tells the story of Wayne and Kelly Maines, a good-hearted, hard-working American couple, neither rich nor poor, neither fabulous nor downtrodden, who after years of trying to conceive a baby are finally given the opportunity to adopt: infant boys, identical twins, the children of Kelly’s second cousin. 
+</div>
+<div style="display:none;width:250px;border:solid">
+   Children are never what one expects, and the trick is not to be disappointed — in fact, to be pleased — with who they are. This process of constantly recalibrating one’s expectations is the central job of parenthood: a high-wire act in which one’s own memories of childhood and the priorities and habits developed there come into direct conflict with who one’s child actually is. No one describes this tension better than Andrew Solomon in his sweeping 2012 book, “Far From the Tree,” in which he showed the tireless efforts of parents to help children who are entirely unlike them evolve into who they are. “Becoming Nicole” iterates this idea, delving deep into the case of a single family with a transgender child and discovering in its particulars certain universal truths about the ways children arrive in one’s life already themselves. 
+</div>
+<script>
+    var aIn = document.getElementsByTagName('input');
+    var aDiv = document.getElementsByTagName('div');
+//    for(var i=0;i<aIn.length;i++){
+//        aIn[i].onclick=function(){
+//            console.log(i);
+//            for(var j=0;j<aDiv.length;j++){
+//                aDiv[j].style.display='none';
+//            }   
+            
+            //aDiv[i].style.display='block';
+     
+    
+    
+    
+
+    //note:if doing this way, i actually accumulate to 3 after the for -loop, then this sentence is actually aDiv[3].style.display.
+            //the for-loop,actually assign 3 different functions to three independent obj,but not call them until onclick event actually happens.So, we need to do this way:
+            
+    for(var i=0;i<aIn.length;i++){
+        aIn[i].index=i;
+        aIn[i].onclick=function(){
+            for(var j=0;j<aDiv.length;j++){
+                aDiv[j].style.display='none';
+                
+            }
+            aDiv[this.index].style.display="block";
+        };
+    
+    }         
+            
+        
+    
+    
+</script>
+</body>
+</html>
